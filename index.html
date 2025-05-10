@@ -23,11 +23,26 @@
     header img {
       height: 50px;
     }
+    nav {
+      display: flex;
+    }
     nav a {
       margin-left: 20px;
       text-decoration: none;
       color: #000;
       font-weight: 600;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .bar {
+      height: 3px;
+      width: 25px;
+      background-color: #333;
+      margin: 4px 0;
+      transition: 0.4s;
     }
     .hero {
       padding: 60px 40px;
@@ -105,7 +120,6 @@
       font-size: 14px;
     }
 
-    /* Responsive Styles */
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -118,11 +132,22 @@
         width: 180px;
       }
 
-      nav {
+      .menu-toggle {
         display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 10px;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        margin: 10px 0;
       }
 
       .hero h2 {
@@ -139,7 +164,7 @@
 
       .service-list {
         flex-wrap: nowrap;
-        overflow-x: scroll;
+        overflow-x: auto;
         animation: none;
       }
 
@@ -163,10 +188,21 @@
       }
     }
   </style>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+    }
+  </script>
 </head>
 <body>
   <header>
     <img src="logo.png" alt="TrendMint Logo" style="width: 250px; max-width: 80%; height: auto; margin-bottom: 10px;" />
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
