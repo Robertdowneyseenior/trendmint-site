@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .thank-you {
+      animation: fadeInUp 1s ease-out forwards;
+      font-size: 36px;
+      line-height: 1.4;
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+      color: yellow;
+      font-size: 40px;
+      margin-top: 20px;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="thank-you">🎉 Thank You!<br>We’ll Get In Touch Soon.</div>
+  <div class="pulse">✨</div>
+
+  <!-- Audio -->
+  <audio autoplay>
+    <source src="https://assets.mixkit.co/active_storage/sfx/1264/1264-preview.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    // 🎊 Confetti blast
+    confetti({
+      particleCount: 200,
+      spread: 90,
+      origin: { y: 0.6 }
+    });
+
+    // 🔁 Redirect home in 5 seconds
+    setTimeout(() => {
+      window.location.href = "index.html"; // Change to your actual homepage
+    }, 5000);
+  </script>
+</body>
+</html>
