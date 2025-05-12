@@ -260,49 +260,110 @@
       <div class="project-card">📸 Viral Carousel for Dating App</div>
     </div>
   </section>
-<section class="section" id="lead" style="display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; gap: 40px; text-align: left;">
-  <div style="flex: 1; min-width: 300px; max-width: 500px; text-align: left;">
-    <h2>📬 Get Your Free Meme Strategy</h2>
+<section class="section" id="lead">
+  <!-- Left: Form -->
+  <div class="lead-form">
+    <h2 style="font-size: 36px;">📬 Get Your Free Meme Strategy</h2>
     <p>Fill this form and we’ll reach out within 24 hours.</p>
-    <form action="https://sheetdb.io/api/v1/e381ubdvox56i" method="POST" onsubmit="handleSubmit(event)">
-      <input type="text" name="data[Name]" placeholder="Your Name" required style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px; border: none;">
-      <input type="email" name="data[Email]" placeholder="Your Email" required style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px; border: none;">
-      <input type="text" name="data[Phone]" placeholder="Mobile Number" required style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px; border: none;">
-      <input type="text" name="data[Business]" placeholder="Your Business Name" required style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px; border: none;">
-      <textarea name="data[Message]" placeholder="Your Requirements" rows="4" required style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px; border: none;"></textarea>
-      <button type="submit" style="padding: 14px 28px; background: yellow; border: none; color: #000; font-weight: bold; border-radius: 8px;">Send Enquiry</button>
+
+    <form action="https://sheetdb.io/api/v1/e381ubdvox56i" method="POST" onsubmit="handleSubmitAndRedirect(event)">
+      <input type="text" name="data[Name]" placeholder="Your Name" required style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px;">
+      <input type="email" name="data[Email]" placeholder="Your Email" required style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px;">
+      <input type="text" name="data[Phone]" placeholder="Mobile Number" required style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px;">
+      <input type="text" name="data[Business]" placeholder="Your Business Name" required style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px;">
+      <textarea name="data[Message]" placeholder="Your Requirements" required style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px;"></textarea>
+
+<input type="hidden" name="data[SubmittedAt]" id="submission-time">
+<button type="submit" style="padding: 14px 28px; background: yellow; border: none; color: #000; font-weight: bold; border-radius: 8px; cursor: pointer;">
+  Send Enquiry
+</button>
+
     </form>
-    <div id="form-status" style="margin-top: 10px; font-weight: bold;"></div>
-    </form>
+
+    <div id="form-status" style="margin-top: 15px; font-weight: bold;"></div>
   </div>
-  <div style="flex: 1; min-width: 300px; text-align: center; position: relative;">
-    <img src="https://raw.githubusercontent.com/Robertdowneyseenior/trendmint-site/main/Business.png" alt="Lead Banner" style="width: 100%; max-width: 500px; border-radius: 12px;">
-    <div style="position: absolute; bottom: 20px; right: 20px; text-align: right; font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 36px; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); line-height: 1.4;">
-      YOU KNOW THE BUSINESS<br><span style="color: yellow;">AND I KNOW THE MARKETING</span>
-    </div>
+
+  <!-- Right: Image -->
+  <div class="lead-image" style="position: relative; max-height: 500px; overflow: hidden;">
+  <img src="https://raw.githubusercontent.com/Robertdowneyseenior/trendmint-site/main/Business.png"
+       alt="Lead Image"
+       style="width: 100%; height: auto; border-radius: 10px; display: block;">
+
+  <div style="position: absolute; bottom: 20px; right: 20px; font-size: 36px; font-weight: 900; font-family: 'Poppins', sans-serif; color: yellow; text-align: right;">
+    YOU KNOW THE BUSINESS<br><span style="color: yellow;">AND I KNOW THE MARKETING</span>
   </div>
+</div>
+
 </section>
+<script>
+  function handleSubmitAndRedirect(event) {
+    event.preventDefault();
+    const form = event.target;
 
+    // Set timestamp before submitting
+    const now = new Date();
+    const formattedTime = now.toLocaleString("en-IN", {
+      timeZone: "Asia/Kolkata",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit"
+    });
 
-  <footer>
-    &copy; 2025 TrendMint Digital Media. Made with memes.
-  </footer>
-<div class="custom-cursor" id="cursor"></div>
+    document.getElementById('submission-time').value = formattedTime;
 
-  <script>
-    const cursor = document.getElementById("cursor");
-    document.addEventListener("mousemove", e => {
-  cursor.style.top = e.clientY + "px";
-  cursor.style.left = e.clientX + "px";
-});
+    const formData = new FormData(form);
 
-// Ripple effect on click
-document.addEventListener("click", () => {
-  cursor.style.animation = "none";
-  cursor.offsetHeight; // trigger reflow
-  cursor.style.animation = "ripple 0.6s ease-out";
-});
-  </script>
+    fetch(form.action, {
+      method: 'POST',
+      body: formData
+    }).then(response => {
+      if (response.ok) {
+        form.reset();
+        window.location.href = "thank-you.html";
+      } else {
+        alert("❌ Submission failed.");
+      }
+    }).catch(() => {
+      alert("❌ Network error.");
+    });
+  }
+</script>
+
+<style>
+  #lead {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: nowrap;
+  }
+
+  .lead-form, .lead-image {
+    width: 48%;
+  }
+
+  @media (max-width: 900px) {
+    #lead {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lead-form, .lead-image {
+      width: 100%;
+    }
+  }
+</style>
+</script>
+<footer style="background-color: #000; color: #fff; text-align: center; padding: 40px 20px; font-family: 'Poppins', sans-serif;">
+  <h3 style="margin-bottom: 10px; font-weight: 700;">TrendMint Digital Media</h3>
+  <p style="margin: 0;">⚡ Meme-Driven. Trend-Obsessed. Culture-Cracking Content.</p>
+  <p style="margin: 10px 0;">📧 contact@trendmint.co.in</p>
+  <p style="margin-top: 20px; font-size: 14px; color: #aaa;">&copy; 2025 TrendMint. All rights reserved.</p>
+</footer>
 <script>
   function handleSubmitAndRedirect(event) {
     event.preventDefault();
@@ -312,17 +373,14 @@ document.addEventListener("click", () => {
     fetch(form.action, {
       method: 'POST',
       body: formData
-    })
-    .then(response => {
+    }).then(response => {
       if (response.ok) {
         form.reset();
-        // Redirect to thank-you page
         window.location.href = "thank-you.html";
       } else {
         alert("❌ Submission failed.");
       }
-    })
-    .catch(() => {
+    }).catch(() => {
       alert("❌ Network error.");
     });
   }
