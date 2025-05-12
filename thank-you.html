@@ -58,12 +58,6 @@
 </head>
 <body>
   <div class="thank-you">🎉 Thank You!<br>We’ll Get In Touch Soon.</div>
-  <div class="pulse">✨</div>
-
-  <!-- Audio -->
-  <audio autoplay>
-    <source src="https://assets.mixkit.co/active_storage/sfx/1264/1264-preview.mp3" type="audio/mpeg">
-  </audio>
 
   <script>
     // 🎊 Confetti blast
@@ -73,10 +67,16 @@
       origin: { y: 0.6 }
     });
 
-    // 🔁 Redirect home in 5 seconds
+    // 🔁 Redirect home in 10 seconds
     setTimeout(() => {
-      window.location.href = "index.html"; // Change to your actual homepage
+      window.location.href = "index.html";
     }, 5000);
+
+    // 🔊 Play success sound after short delay (bypasses autoplay block)
+    setTimeout(() => {
+      const audio = new Audio("https://raw.githubusercontent.com/Robertdowneyseenior/trendmint-site/main/Thank%20You.mp3");
+      audio.play();
+    }, 2000);
   </script>
 </body>
 </html>
