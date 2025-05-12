@@ -57,8 +57,11 @@
   </style>
 </head>
 <body>
-  <div class="thank-you">🎉 Thank You!<br>We’ll Get In Touch Soon.</div>
+  <audio autoplay>
+    <source src="https://raw.githubusercontent.com/Robertdowneyseenior/trendmint-site/main/Thank%20You.mp3" type="audio/mpeg">
+  </audio>
 
+  <div class="thank-you">🎉 Thank You!<br>We’ll Get In Touch Soon.</div>
   <script>
     // 🎊 Confetti blast
     confetti({
@@ -67,16 +70,20 @@
       origin: { y: 0.6 }
     });
 
-    // 🔁 Redirect home in 10 seconds
+    // 🔁 Redirect home in 5 seconds
     setTimeout(() => {
-      window.location.href = "index.html";
+      window.location.href = "index.html"; // Change to your actual homepage
     }, 5000);
-
-    // 🔊 Play success sound after short delay (bypasses autoplay block)
-    setTimeout(() => {
-      const audio = new Audio("https://raw.githubusercontent.com/Robertdowneyseenior/trendmint-site/main/Thank%20You.mp3");
-      audio.play();
-    }, 2000);
   </script>
+
+<script>
+  window.addEventListener("load", () => {
+    const audio = new Audio("https://raw.githubusercontent.com/Robertdowneyseenior/trendmint-site/main/Thank%20You.mp3");
+    audio.play().catch((err) => {
+      console.log("Autoplay blocked, waiting for interaction...");
+    });
+  });
+</script>
+
 </body>
 </html>
