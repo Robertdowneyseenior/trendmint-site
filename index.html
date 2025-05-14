@@ -217,38 +217,18 @@
       }
     }
 
-    @media (max-width: 768px) {
-        header {
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 20px;
-        }
-        nav {
-            margin-top: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .hero h1 {
-            font-size: 32px !important;
-            line-height: 1.4 !important;
-        }
-        .hero p {
-            font-size: 15px !important;
-            padding: 0 10px !important;
-        }
-        .section {
-            padding: 60px 20px 30px !important;
-            text-align: center !important;
-        }
-        .projects-grid {
-            grid-template-columns: 1fr !important;
-        }
-        .custom-cursor {
-            display: none !important;
-        }
-    }
-    </style>
+@media (max-width: 768px) {
+  body, html {
+    font-size: 14px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em !important;
+  }
+  p, a, span, div {
+    font-size: 1em !important;
+  }
+}
+</style>
 </head>
 <body>
 <header>
