@@ -13,60 +13,185 @@
 </head>
 <body class="bg-black text-white">
 
-<!-- All content remains unchanged above -->
+  <!-- Hero Section -->
+  <section class="h-screen flex items-center justify-center text-center px-8 bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e]">
+    <div>
+      <h1 class="text-5xl font-semibold mb-4">We Turn Clicks Into Clients</h1>
+      <p class="text-lg max-w-2xl mx-auto">
+        Digital marketing that actually delivers. Premium strategies for Facebook, YouTube, and your brand identity.
+      </p>
+      <button class="mt-6 px-6 py-2 border border-white text-white hover:bg-white hover:text-black transition">
+        Start Your Journey
+      </button>
+    </div>
+  </section>
 
-<!-- Counter Script and Form Handler -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    // Counter Animation
-    const counters = document.querySelectorAll(".count-up");
-    counters.forEach(counter => {
-      const update = () => {
-        const target = +counter.dataset.target;
-        const current = +counter.innerText;
-        const increment = target / 50;
-        if (current < target) {
-          counter.innerText = Math.ceil(current + increment);
-          setTimeout(update, 30);
-        } else {
-          counter.innerText = target;
-        }
-      };
-      update();
-    });
+  <!-- Services Section -->
+  <section class="text-center py-24 px-4">
+    <h2 class="text-4xl mb-8">Our Services</h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div class="p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
+        <h3 class="text-xl font-bold mb-2">Social Media Marketing</h3>
+        <p class="text-sm text-gray-300">We help you monetize digital platforms with a premium brand image tailored to your audience.</p>
+      </div>
+      <div class="p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
+        <h3 class="text-xl font-bold mb-2">Facebook Page Management</h3>
+        <p class="text-sm text-gray-300">We help you monetize digital platforms with a premium brand image tailored to your audience.</p>
+      </div>
+      <div class="p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
+        <h3 class="text-xl font-bold mb-2">YouTube Channel Growth</h3>
+        <p class="text-sm text-gray-300">We help you monetize digital platforms with a premium brand image tailored to your audience.</p>
+      </div>
+      <div class="p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
+        <h3 class="text-xl font-bold mb-2">Performance Ad Campaigns</h3>
+        <p class="text-sm text-gray-300">We help you monetize digital platforms with a premium brand image tailored to your audience.</p>
+      </div>
+      <div class="p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
+        <h3 class="text-xl font-bold mb-2">Website & App Development</h3>
+        <p class="text-sm text-gray-300">We help you monetize digital platforms with a premium brand image tailored to your audience.</p>
+      </div>
+      <div class="p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
+        <h3 class="text-xl font-bold mb-2">Premium Brand Identity</h3>
+        <p class="text-sm text-gray-300">We help you monetize digital platforms with a premium brand image tailored to your audience.</p>
+      </div>
+    </div>
+  </section>
 
-    // Form Submission Handler
-    const form = document.getElementById("contactForm");
-    if (form) {
-      form.addEventListener("submit", async function(e) {
-        e.preventDefault();
-        const formData = new FormData(form);
-        const data = {};
-        formData.forEach((value, key) => {
-          data[key] = value;
-        });
+  <!-- Testimonials -->
+  <section class="py-24 px-6 bg-black text-white">
+    <h2 class="text-4xl font-semibold text-center mb-16">What Our Clients Say</h2>
+    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <div class="bg-[#121212] p-8 rounded-xl shadow-md border border-white/10 hover:shadow-yellow-500/10">
+        <p class="text-gray-300 mb-4">“TrendMint helped us go viral and keep our tone savage. They get memes, and they get results.”</p>
+        <h4 class="text-lg font-semibold text-yellow-400">Sakhtimaan Memes</h4>
+      </div>
+      <div class="bg-[#121212] p-8 rounded-xl shadow-md border border-white/10 hover:shadow-yellow-500/10">
+        <p class="text-gray-300 mb-4">“Their Facebook management grew our page consistently — creative, clever, and fast.”</p>
+        <h4 class="text-lg font-semibold text-yellow-400">Humor Lust</h4>
+      </div>
+      <div class="bg-[#121212] p-8 rounded-xl shadow-md border border-white/10 hover:shadow-yellow-500/10">
+        <p class="text-gray-300 mb-4">“We trust them with our stories and audience. Premium creatives with real emotion.”</p>
+        <h4 class="text-lg font-semibold text-yellow-400">The Love Tales</h4>
+      </div>
+      <div class="bg-[#121212] p-8 rounded-xl shadow-md border border-white/10 hover:shadow-yellow-500/10">
+        <p class="text-gray-300 mb-4">“Ads, web, design — they helped us scale with clarity and consistency.”</p>
+        <h4 class="text-lg font-semibold text-yellow-400">Aditya Kumar</h4>
+      </div>
+    </div>
+  </section>
 
-        try {
-          const response = await fetch("https://sheetdb.io/api/v1/e381ubdvox56i", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ data })
-          });
+  <!-- Our Process -->
+  <section class="py-24 px-6 bg-gradient-to-br from-black via-gray-900 to-black text-center">
+    <h2 class="text-4xl font-bold mb-12">Our Process</h2>
+    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <div class="p-6 rounded-2xl bg-[#121212] shadow-lg">
+        <h3 class="text-xl mb-2 text-yellow-400 font-semibold">01. Discovery</h3>
+        <p class="text-gray-300">We understand your brand, audience, and goals deeply.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-[#121212] shadow-lg">
+        <h3 class="text-xl mb-2 text-yellow-400 font-semibold">02. Strategy</h3>
+        <p class="text-gray-300">We craft your roadmap — creative, media, and growth plan.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-[#121212] shadow-lg">
+        <h3 class="text-xl mb-2 text-yellow-400 font-semibold">03. Execution</h3>
+        <p class="text-gray-300">We launch, test, and optimize with real-time insights.</p>
+      </div>
+    </div>
+  </section>
 
-          if (response.ok) {
-            window.location.href = "https://www.trendmint.co.in/thank-you.html";
+  <!-- Real Results -->
+  <section class="py-24 px-6 text-center bg-black">
+    <h2 class="text-4xl font-bold mb-12">Real Results</h2>
+    <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div class="p-6 rounded-xl bg-[#1f1f1f] shadow-md">
+        <div class="text-3xl font-extrabold mb-2 count-up" data-target="400">0</div>
+        <p class="uppercase tracking-wide text-sm text-gray-400">Leads Generated</p>
+      </div>
+      <div class="p-6 rounded-xl bg-[#1f1f1f] shadow-md">
+        <div class="text-3xl font-extrabold mb-2 count-up" data-target="95">0</div>
+        <p class="uppercase tracking-wide text-sm text-gray-400">Client Retention %</p>
+      </div>
+      <div class="p-6 rounded-xl bg-[#1f1f1f] shadow-md">
+        <div class="text-3xl font-extrabold mb-2 count-up" data-target="50">0</div>
+        <p class="uppercase tracking-wide text-sm text-gray-400">Brands Scaled</p>
+      </div>
+      <div class="p-6 rounded-xl bg-[#1f1f1f] shadow-md">
+        <div class="text-3xl font-extrabold mb-2 count-up" data-target="100">0</div>
+        <p class="uppercase tracking-wide text-sm text-gray-400">Campaigns Launched</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="text-white max-w-4xl mx-auto bg-gradient-to-br from-[#1a1a1a] via-[#111111] to-[#1a1a1a] p-12 rounded-3xl shadow-2xl my-20">
+    <h2 class="text-4xl mb-8 text-center font-bold">Let’s Talk Business</h2>
+    <form class="space-y-8" action="https://sheetdb.io/api/v1/e381ubdvox56i" method="POST">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="flex flex-col">
+          <label class="mb-2 text-sm text-gray-300">Name</label>
+          <input type="text" name="data[name]" placeholder="Enter your name" class="p-4 rounded-xl bg-black border border-white/20 placeholder-gray-400 w-full" />
+        </div>
+        <div class="flex flex-col">
+          <label class="mb-2 text-sm text-gray-300">Email</label>
+          <input type="email" name="data[email]" placeholder="Enter your email" class="p-4 rounded-xl bg-black border border-white/20 placeholder-gray-400 w-full" />
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <label class="mb-2 text-sm text-gray-300">Phone</label>
+        <input type="tel" name="data[phone]" placeholder="Enter your phone number" class="p-4 rounded-xl bg-black border border-white/20 placeholder-gray-400 w-full" />
+      </div>
+      <div class="flex flex-col">
+        <label class="mb-2 text-sm text-gray-300">Business</label>
+        <input type="text" name="data[business]" placeholder="Your business or brand name" class="p-4 rounded-xl bg-black border border-white/20 placeholder-gray-400 w-full" />
+      </div>
+      <div class="flex flex-col">
+        <label class="mb-2 text-sm text-gray-300">Message</label>
+        <textarea name="data[message]" rows="5" placeholder="Tell us more about your project..." class="p-4 rounded-xl bg-black border border-white/20 placeholder-gray-400 w-full"></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="mt-6 px-8 py-4 bg-yellow-400 text-black font-bold text-lg rounded-xl hover:bg-yellow-300 transition-all duration-300">Submit</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-24 px-6 text-left max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold mb-10 text-center">FAQs</h2>
+    <div class="space-y-6">
+      <div>
+        <h3 class="text-xl font-semibold text-yellow-400">What industries do you work with?</h3>
+        <p class="text-gray-300">We specialize in D2C, influencers, agencies, creators, and service businesses.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-yellow-400">How soon can we start?</h3>
+        <p class="text-gray-300">Once we understand your goals and receive the brief, we start within 48 hours.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-yellow-400">Do you offer monthly retainers?</h3>
+        <p class="text-gray-300">Yes, we provide monthly packages tailored to your budget and growth plans.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Counter Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const counters = document.querySelectorAll(".count-up");
+      counters.forEach(counter => {
+        const update = () => {
+          const target = +counter.dataset.target;
+          const current = +counter.innerText;
+          const increment = target / 50;
+          if (current < target) {
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(update, 30);
           } else {
-            alert("There was an error submitting the form. Please try again.");
+            counter.innerText = target;
           }
-        } catch (error) {
-          alert("An error occurred. Please check your connection and try again.");
-        }
+        };
+        update();
       });
-    }
-  });
-</script>
-
+    });
+  </script>
 </body>
 </html>
