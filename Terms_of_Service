@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms of Service | TrendMint</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #111;
+      color: #eee;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    h1, h2 {
+      color: #ffd700;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Terms of Service</h1>
+    <p><strong>Effective Date:</strong> June 20, 2025</p>
+    <p>Welcome to TrendMint Digital Media Pvt. Ltd. (“TrendMint”, “we”, “us”, or “our”). These Terms of Service (“Terms”) govern your access to and use of our website, services, and products. By using our website or any of our services, you agree to be bound by these Terms. If you do not agree with any part of these Terms, you must not use our services.</p>
+
+    <h2>1. Use of Our Services</h2>
+    <p>You agree to use our services only for lawful purposes and in accordance with these Terms. You must not use our services in any way that:</p>
+    <ul>
+      <li>Violates any applicable laws or regulations</li>
+      <li>Infringes on the rights of others</li>
+      <li>Attempts to gain unauthorized access to our systems or data</li>
+    </ul>
+
+    <h2>2. Intellectual Property</h2>
+    <p>All content, designs, graphics, and software provided by TrendMint are our property or the property of our licensors. You may not reproduce, modify, distribute, or create derivative works without our written permission.</p>
+
+    <h2>3. User Responsibilities</h2>
+    <p>You are responsible for:</p>
+    <ul>
+      <li>Providing accurate and current information</li>
+      <li>Maintaining the confidentiality of any account details</li>
+      <li>Any activity under your account</li>
+    </ul>
+
+    <h2>4. Payments and Subscriptions</h2>
+    <p>If you purchase services from us, you agree to pay all applicable fees on time. All payments are non-refundable unless otherwise specified in a written agreement.</p>
+
+    <h2>5. Limitation of Liability</h2>
+    <p>TrendMint shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services. We make no warranties or guarantees regarding uptime, data loss, or uninterrupted access.</p>
+
+    <h2>6. Termination</h2>
+    <p>We reserve the right to suspend or terminate your access to our services at any time, without notice, for conduct that we believe violates these Terms or is harmful to our interests.</p>
+
+    <h2>7. Privacy</h2>
+    <p>Your privacy is important to us. Please review our <a href="/privacy-policy">Privacy Policy</a> to understand how we collect, use, and safeguard your information.</p>
+
+    <h2>8. Changes to These Terms</h2>
+    <p>We may update these Terms from time to time. Any changes will be effective upon posting. Continued use of our services constitutes acceptance of the revised Terms.</p>
+
+    <h2>9. Contact Us</h2>
+    <p>If you have any questions about these Terms, please contact us at:</p>
+    <p>
+      <strong>TrendMint Digital Media Pvt. Ltd.</strong><br>
+      Email: <a href="mailto:contact@trendmint.in">contact@trendmint.in</a><br>
+    </p>
+
+    <footer>
+      &copy; 2025 TrendMint Digital Media Pvt. Ltd. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
