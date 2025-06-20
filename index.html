@@ -9,6 +9,23 @@
     body {
       font-family: sans-serif;
     }
+    section:hover {
+      box-shadow: 0 0 30px rgba(255, 255, 0, 0.15);
+      transition: box-shadow 0.4s ease-in-out;
+    }
+    .glow-box {
+      transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+    .glow-box:hover {
+      box-shadow: 0 0 25px rgba(255, 255, 0, 0.4);
+      transform: scale(1.03);
+    }
+    .glow-box:hover h3,
+    .glow-box:hover .count-up,
+    .glow-box:hover p {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
   </style>
 </head>
 <body class="bg-black text-white font-sans">
@@ -30,27 +47,27 @@
   <section class="text-center py-24 px-4">
     <h2 class="text-4xl mb-8">Our Services</h2>
     <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-      <div class="p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
+      <div class="glow-box p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
         <h3 class="text-xl font-bold mb-2">Social Media Marketing</h3>
         <p class="text-sm text-gray-300">Reach the right audience with scroll-stopping content and smart targeting.</p>
       </div>
-      <div class="p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
+      <div class="glow-box p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
         <h3 class="text-xl font-bold mb-2">Facebook Page Management</h3>
         <p class="text-sm text-gray-300">We manage, grow, and monetize your Facebook assets — consistently.</p>
       </div>
-      <div class="p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
+      <div class="glow-box p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
         <h3 class="text-xl font-bold mb-2">YouTube Channel Growth</h3>
         <p class="text-sm text-gray-300">Boost your watch hours, subs, and revenue with audience-first strategies.</p>
       </div>
-      <div class="p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
+      <div class="glow-box p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
         <h3 class="text-xl font-bold mb-2">Performance Ad Campaigns</h3>
         <p class="text-sm text-gray-300">Scale with high-ROI ads powered by sharp creatives and real-time data.</p>
       </div>
-      <div class="p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
+      <div class="glow-box p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
         <h3 class="text-xl font-bold mb-2">Website & App Development</h3>
         <p class="text-sm text-gray-300">Modern, mobile-first websites & apps built to convert.</p>
       </div>
-      <div class="p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
+      <div class="glow-box p-6 rounded-2xl shadow-xl text-left bg-gradient-to-r from-[#232526] to-[#414345] border border-white/10">
         <h3 class="text-xl font-bold mb-2">Premium Brand Identity</h3>
         <p class="text-sm text-gray-300">Visual identity that speaks your brand’s language and builds trust.</p>
       </div>
@@ -99,24 +116,24 @@
     </div>
   </section>
 
-  <!-- Real Results -->
+  <!-- Real Results Section -->
   <section class="py-24 px-6 text-center bg-black">
     <h2 class="text-4xl font-bold mb-12">Real Results</h2>
     <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-      <div class="p-6 rounded-xl bg-[#1f1f1f] shadow-md">
-        <div class="text-3xl font-extrabold mb-2 count-up" data-target="400">0</div>
-        <p class="uppercase tracking-wide text-sm text-gray-400">Leads Generated</p>
+      <div class="glow-box p-6 rounded-xl bg-[#1f1f1f] shadow-md">
+        <div class="text-3xl font-extrabold mb-2 count-up" data-target="20000000">0</div>
+        <p class="uppercase tracking-wide text-sm text-gray-400">Ad Spent</p>
       </div>
-      <div class="p-6 rounded-xl bg-[#1f1f1f] shadow-md">
+      <div class="glow-box p-6 rounded-xl bg-[#1f1f1f] shadow-md">
         <div class="text-3xl font-extrabold mb-2 count-up" data-target="95">0</div>
-        <p class="uppercase tracking-wide text-sm text-gray-400">Client Retention %</p>
+        <p class="uppercase tracking-wide text-sm text-gray-400">Client Retention</p>
       </div>
-      <div class="p-6 rounded-xl bg-[#1f1f1f] shadow-md">
-        <div class="text-3xl font-extrabold mb-2 count-up" data-target="50">0</div>
+      <div class="glow-box p-6 rounded-xl bg-[#1f1f1f] shadow-md">
+        <div class="text-3xl font-extrabold mb-2 count-up" data-target="20">0</div>
         <p class="uppercase tracking-wide text-sm text-gray-400">Brands Scaled</p>
       </div>
-      <div class="p-6 rounded-xl bg-[#1f1f1f] shadow-md">
-        <div class="text-3xl font-extrabold mb-2 count-up" data-target="100">0</div>
+      <div class="glow-box p-6 rounded-xl bg-[#1f1f1f] shadow-md">
+        <div class="text-3xl font-extrabold mb-2 count-up" data-target="250">0</div>
         <p class="uppercase tracking-wide text-sm text-gray-400">Campaigns Launched</p>
       </div>
     </div>
@@ -227,5 +244,43 @@
     }
   });
 </script>
+   <script>
+    const counters = document.querySelectorAll(".count-up");
+    const options = { threshold: 0.5 };
+
+    const animateCount = (counter) => {
+      const update = () => {
+        const target = +counter.dataset.target;
+        const current = +counter.innerText;
+        const increment = Math.max(target / 60, 1);
+
+        if (current < target) {
+          counter.innerText = Math.min(target, Math.ceil(current + increment));
+          requestAnimationFrame(update);
+        } else {
+          if (target >= 10000000) {
+            counter.innerText = `₹${(target / 10000000).toFixed(1)}Cr+`;
+          } else {
+            counter.innerText = `${target}${target < 100 ? '%' : '+'}`;
+          }
+        }
+      };
+      update();
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          animateCount(counter);
+          observer.unobserve(counter);
+        }
+      });
+    }, options);
+
+    counters.forEach(counter => {
+      observer.observe(counter);
+    });
+  </script>
 </body>
 </html>
