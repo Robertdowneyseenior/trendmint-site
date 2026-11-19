@@ -195,3 +195,12 @@ footer{padding:80px 0 40px;overflow:hidden}
  .fyr{padding:30px}.row2{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.js .rv{opacity:1;transform:none}.say .wd{opacity:1}}
+
+.bi{display:inline-block;vertical-align:-3px;flex:none;border-radius:3px}
+.badge .bi{margin:0 1px 0 3px}
+.step li,.pills span,.tag{display:inline-flex;align-items:center;gap:6px}
+.av .ch{position:absolute;right:-4px;bottom:-4px;width:20px;height:20px;border-radius:50%;border:2px solid #fff;background:#fff;display:grid;place-items:center}
+.cw-logo img{border-radius:12px;box-shadow:0 8px 18px -8px rgba(31,184,85,.6)}
+.auto>.bi,.ai-c{width:26px;font-size:20px;text-align:center}
+.notif b{display:flex;align-items:center;gap:6px}
+.kc small .bi{vertical-align:-2px}
