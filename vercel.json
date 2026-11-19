@@ -1,12 +1,76 @@
 {
   "cleanUrls": true,
   "redirects": [
-    {"source": "/contact", "destination": "/#contact", "permanent": false},
-    {"source": "/services", "destination": "/#system", "permanent": false},
-    {"source": "/products", "destination": "/#products", "permanent": false},
-    {"source": "/about", "destination": "/#about", "permanent": false}
+    {
+      "source": "/contact",
+      "destination": "/#contact",
+      "permanent": false
+    },
+    {
+      "source": "/services",
+      "destination": "/#system",
+      "permanent": false
+    },
+    {
+      "source": "/products",
+      "destination": "/#products",
+      "permanent": false
+    },
+    {
+      "source": "/about",
+      "destination": "/#about",
+      "permanent": false
+    },
+    {
+      "source": "/whatsapp-api-india",
+      "destination": "/#chatwaba",
+      "permanent": false
+    },
+    {
+      "source": "/whatsapp-crm",
+      "destination": "/#chatwaba",
+      "permanent": false
+    },
+    {
+      "source": "/digital-marketing-agency-lucknow",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/lead-generation",
+      "destination": "/#what",
+      "permanent": false
+    },
+    {
+      "source": "/video-ads-ugc",
+      "destination": "/#what",
+      "permanent": false
+    },
+    {
+      "source": "/fixyourreels",
+      "destination": "/#fixyourreels",
+      "permanent": false
+    },
+    {
+      "source": "/blog",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/blog/:slug*",
+      "destination": "/",
+      "permanent": false
+    }
   ],
   "headers": [
-    {"source": "/media/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]}
+    {
+      "source": "/media/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
   ]
 }
