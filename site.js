@@ -122,3 +122,19 @@
     } catch (x) { msg.className = 'msg err'; msg.textContent = x.message + ' You can also WhatsApp us at +91 80093 67690.'; b.disabled = false; b.textContent = 'Get my free growth plan →'; }
   });
 })();
+
+// growth-plan popup: CTA buttons open the form in a modal instead of scrolling
+(function () {
+  const form = document.getElementById('lead'); if (!form) return;
+  const home = document.createComment('lead-form'); form.parentNode.insertBefore(home, form);
+  const dlg = document.createElement('dialog'); dlg.className = 'gp-modal';
+  dlg.innerHTML = '<button class="gp-x" type="button" aria-label="Close">×</button><h3>Get your free <span class="grad">growth plan</span></h3><p>Tell us about your business. We’ll call you within one working day.</p><div class="gp-slot"></div>';
+  document.body.appendChild(dlg);
+  const slot = dlg.querySelector('.gp-slot');
+  const open = e => { e.preventDefault(); slot.appendChild(form); form.style.opacity = 1; form.style.transform = 'none'; dlg.showModal(); document.documentElement.style.overflow = 'hidden'; setTimeout(() => form.querySelector('input[name=name]')?.focus(), 50); };
+  const close = () => dlg.close();
+  dlg.addEventListener('close', () => { home.parentNode.insertBefore(form, home.nextSibling); document.documentElement.style.overflow = ''; });
+  dlg.querySelector('.gp-x').addEventListener('click', close);
+  dlg.addEventListener('click', e => { if (e.target === dlg) close(); });
+  document.querySelectorAll('.btn[href="#contact"]').forEach(b => b.addEventListener('click', open));
+})();

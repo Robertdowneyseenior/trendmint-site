@@ -263,3 +263,12 @@ h1,h2,h3{letter-spacing:-.02em;line-height:1.12}
  .fgrid{grid-template-columns:1fr}
  .bigline{font-size:34px}
 }
+.gp-modal{border:0;padding:32px 28px 26px;border-radius:26px;width:min(520px,calc(100vw - 24px));max-height:calc(100vh - 24px);overflow:auto;box-shadow:0 40px 100px -30px rgba(20,10,60,.55);margin:auto}
+.gp-modal::backdrop{background:rgba(15,13,26,.55);backdrop-filter:blur(6px)}
+.gp-modal[open]{animation:gpIn .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes gpIn{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
+.gp-modal h3{font-size:clamp(24px,3vw,30px);margin-bottom:6px;padding-right:30px}
+.gp-modal p{color:var(--mute);font-size:15px;margin-bottom:18px}
+.gp-modal form{padding:0;border:0;box-shadow:none}
+.gp-x{position:absolute;right:16px;top:14px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:24px;line-height:1;cursor:pointer;color:var(--soft)}
+.gp-x:hover{border-color:var(--ink)}
