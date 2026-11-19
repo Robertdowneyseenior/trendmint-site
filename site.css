@@ -204,3 +204,20 @@ footer{padding:80px 0 40px;overflow:hidden}
 .auto>.bi,.ai-c{width:26px;font-size:20px;text-align:center}
 .notif b{display:flex;align-items:center;gap:6px}
 .kc small .bi{vertical-align:-2px}
+
+.hero .wrap{grid-template-columns:1fr;justify-items:center;text-align:center}
+.hc{max-width:920px;display:flex;flex-direction:column;align-items:center}
+.hero h1{font-size:clamp(44px,6.4vw,88px)}
+.hero .lead-p{margin-left:auto;margin-right:auto}
+.cta-row,.trust{justify-content:center}
+.badge{display:inline-block;line-height:1.9;padding:6px 16px 6px 8px;text-align:center}
+.badge i{margin-right:6px}
+.badge .bi{vertical-align:-4px;margin:0 3px}
+.trust span{gap:8px}.trust .bi{vertical-align:0}
+.works{position:relative;z-index:1;max-width:1100px;margin:64px auto 0;padding:0 24px;text-align:center}
+.works small{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:20px}
+.wl{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.wl span{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:14px;background:#fff;border:1px solid var(--line);box-shadow:0 8px 20px -14px rgba(40,25,120,.35);transition:transform .25s}
+.wl span:hover{transform:translateY(-3px)}
+.wl b{font-size:15px;font-weight:700;color:var(--ink)}
+.wl .bi{vertical-align:0}

@@ -96,7 +96,7 @@
   g.from('#bigline span', { yPercent: 60, opacity: 0, stagger: .15, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '#bigline', start: 'top 90%' } });
 
   // subtle parallax on hero demo
-  g.to('.hvid', { y: -40, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  
 
   // form
 })();
